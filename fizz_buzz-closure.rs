@@ -10,11 +10,11 @@ fn new_looper(count_to: i32, string: &'static str)
 }
 
 fn main() {
-    let mut loopers = vec!(
+    let mut loopers = [
         new_looper(3, "fizz"),
         new_looper(5, "buzz"),
         new_looper(7, "boom")
-    );
+    ];
     for n in 1..101 {
         if loopers.iter_mut().fold( // did we print anything?
             false, |b, looper|

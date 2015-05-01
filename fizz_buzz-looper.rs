@@ -17,7 +17,7 @@ impl Looper {
 fn main() {
     let mut fizz = Looper { var: 1, to: 3, val: "fizz" };
     let mut buzz = Looper { var: 1, to: 5, val: "buzz" };
-    let mut loopers = vec!(&mut fizz, &mut buzz);
+    let mut loopers = [&mut fizz, &mut buzz];
     for n in 1..101 {
         if ! loopers.iter_mut().fold(
             false, |b, ref mut x| x.bump() || b

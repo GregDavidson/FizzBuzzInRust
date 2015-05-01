@@ -78,7 +78,7 @@ fn test3() {
     let mut fizz = ( (0..3).rev().cycle(), "fizz" );
     let mut buzz = ( (0..5).rev().cycle(), "buzz" );
     for n in 1..21 {
-        let pairs = vec!(
+        let pairs = [
             ( match fizz.0.next() {
                 Some(x) => x,
                 None => panic!("fell off cycle"),
@@ -86,7 +86,7 @@ fn test3() {
             ( match buzz.0.next() {
                 Some(x) => x,
                 None => panic!("fell off cycle"),
-            }, buzz.1 ) );
+            }, buzz.1 ) ];
         if pairs.iter().fold(
             false, |b, pair| if pair.0 != 0 { b } else {
                 print!("{}", pair.1); true
@@ -166,7 +166,7 @@ fn fizz_buzz() {
 fn fizz_buzz() {
     let mut fizz = ( (0..3).rev().cycle(), "fizz" );
     let mut buzz = ( (0..5).rev().cycle(), "buzz" );
-    let mut pairs = vec!(&fizz, &buzz);
+    let mut pairs = [&fizz, &buzz];
     for n in 1..21 {
         if pairs.iter_mut().fold(
             false, |b, pair| {
@@ -186,7 +186,7 @@ fn fizz_buzz() {
 fn fizz_buzz() {
     let mut fizz = ( (0..3).rev().cycle(), "fizz" );
     let mut buzz = ( (0..5).rev().cycle(), "buzz" );
-    let mut pairs = vec!(&mut fizz, &mut buzz);
+    let mut pairs = [&mut fizz, &mut buzz];
     for n in 1..21 {
         if pairs.iter_mut().fold(
             false, |b, pair|
