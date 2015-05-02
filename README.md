@@ -1,4 +1,5 @@
-_--> [My Public Page Is Here](https://gregdavidson.github.io/) <--_
+| [My Public GitHub Page Is Here](https://gregdavidson.github.io/) | [My Website Is Here](http://jgd.ngender.net)
+|----------|------------
 
 
 # Fizz Buzz Variations in Rust
