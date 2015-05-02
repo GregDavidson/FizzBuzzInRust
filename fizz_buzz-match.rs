@@ -11,7 +11,7 @@ fn main() {
                         if x != 0 { b } else {
                             print!("{}", pair.1); true
                         },
-                    None => panic!("fell off cycle")
+                    None => unreachable!() // fell off cycle!
                 }
         ) { println!("") } else { println!("{}", n) }
     }

@@ -1,5 +1,6 @@
-fn new_looper(count_to: i32, string: &'static str)
--> Box<FnMut() -> Option<&'static str>> {
+type SStrP = &'static str;
+fn new_looper(count_to: i32, string: SStrP)
+-> Box<FnMut() -> Option<SStrP>> {
     let mut count = Box::new( 1 );
     Box::new( move | | {
         *count += 1;
